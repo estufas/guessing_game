@@ -1,15 +1,13 @@
 <!DOCTYPE html>
 <html>
-<head>
-  <title>Guess guess</title>
 
-</head>
-<body>
+    <head>
+      <title>Guess guess</title>
+    </head>
 
-Lets talk about River.
+    <body>
 
-</body>
-</html>
+    Lets talk about River.
 
 <script>
 
@@ -17,18 +15,21 @@ var guess,
     answer,
     message;
 
-guess = prompt("Tell me, objectively, best movie ever.");
+guess = prompt("Tell me, objectively, best movie ever.").toUpperCase();
 console.log("The user guessed " + guess);
 
-answer = "My Own Prvate Idaho";
-console.log("The answer is " + answer);
-
-if (guess == answer) {
-  message = "we are one soul";
-  } else {
-  message = "Nope";
+switch(guess) {
+  case 'MY OWN PRIVATE IDAHO':
+    alert("call me");
+    break;
+  case 'BLADE RUNNER':
+    alert("call me maybe");
+    break;
+  case 'BLOOD IN BLOOD OUT':
+    alert("weirdo");
+  default:
+    alert("it doesnt matter");
 }
-
-alert(message);
-
 </script>
+     </body>
+    </html>
