@@ -1,35 +1,25 @@
-<!DOCTYPE html>
-<html>
-
-    <head>
-      <title>Guess guess</title>
-    </head>
-
-    <body>
-
-    Lets talk about River.
-
 <script>
 
-var guess,
-    answer,
-    message;
+function Game(gameName, question, answers, messages) {
+  this.gameName = gameName;
+  this.question = question;
+  this.answers = answers;
+  this.response = "It doesn't Matter";
+  this.messages = messages;
+  this.run = function() {
+  var guess = prompt(question);
+    for (var i = 0; i <= answers.length; i++) {
+      if (guess.toUpperCase() === answers[i]) {
+        alert(messages[i]);
+        return;
+      }
+      }
+      alert(this.response);
+    }
+  }
 
-guess = prompt("Tell me, objectively, best movie ever.").toUpperCase();
-console.log("The user guessed " + guess);
+var movieGuess = new Game("Movie Guesses", "Tell me, objectively, best move ever.", ["MY OWN PRIVATE IDAHO", "BLADE RUNNER", "BLOOD IN BLOOD OUT"], ["Call me.", "Call me maybe...", "Weirdo"]);
 
-switch(guess) {
-  case 'MY OWN PRIVATE IDAHO':
-    alert("call me");
-    break;
-  case 'BLADE RUNNER':
-    alert("call me maybe");
-    break;
-  case 'BLOOD IN BLOOD OUT':
-    alert("weirdo");
-  default:
-    alert("it doesnt matter");
-}
+movieGuess.run();
+
 </script>
-     </body>
-    </html>
