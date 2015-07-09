@@ -2,3 +2,6 @@
 #I can say anything I want
 
 Added a switch control flow and multiple answers. If you get any of the answers right you get an alert with a message depending on what you answered, and if your's wasnt one of the 3 answers, you get a fail message.
+
+#Updated to Object Constructor
+Used For loop and arrays to make the game easier to replicate for different things.
