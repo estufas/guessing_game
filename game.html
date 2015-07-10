@@ -22,11 +22,11 @@
           <li>A 4th list for whatever.</li>
       </ul>
       <li>Guesses
-          <ol>
+          <ul>
             <li><img src="images/my_own_private.jpeg"/></li>
             <li><img src="images/bladerunner.jpg"/></li>
             <li><img src="images/slide-paco-chuey.jpg"/></li>
-          </ol>
+          </ul>
       </li>
     <script>
     function Game(gameName, question, answers, messages) {
@@ -36,10 +36,10 @@
       this.response = "It doesn't Matter";
       this.messages = messages;
       this.run = function() {
-      var guess = prompt(question);
-        for (var i = 0; i <= answers.length; i++) {
-          if (guess.toUpperCase() === answers[i]) {
-            alert(messages[i]);
+      var guess = prompt(this.question);
+        for (var i = 0; i <= this.answers.length; i++) {
+          if (guess.toUpperCase() === this.answers[i]) {
+            alert(this.messages[i]);
             return;
           }
           }
