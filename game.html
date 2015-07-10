@@ -1,21 +1,54 @@
-<script>
-function Game(gameName, question, answers, messages) {
-  this.gameName = gameName;
-  this.question = question;
-  this.answers = answers;
-  this.response = "It doesn't Matter";
-  this.messages = messages;
-  this.run = function() {
-  var guess = prompt(question);
-    for (var i = 0; i <= answers.length; i++) {
-      if (guess.toUpperCase() === answers[i]) {
-        alert(messages[i]);
-        return;
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Do we like the same movies?</title>
+  </head>
+  <body>
+    <h3>Do we have the same taste in movies?</h3>
+    <p><span>A</span> Whats your favorite movie??</p>
+    <p>25,Human, Seattle</p>
+      <ul>
+          <li>Guesses</li>
+              <ol>
+                  <li></li>
+                  <li> </li>
+              </ol>
+          <li>High Scores</li>
+              <ul>
+                  <li></li>
+                  <li></li>
+              </ul>
+          <li>A 3rd list for whatever.</li>
+          <li>A 4th list for whatever.</li>
+      </ul>
+      <li>Guesses
+          <ol>
+            <li><img src="images/my_own_private.jpeg"/></li>
+            <li><img src="images/bladerunner.jpg"/></li>
+            <li><img src="images/slide-paco-chuey.jpg"/></li>
+          </ol>
+      </li>
+    <script>
+    function Game(gameName, question, answers, messages) {
+      this.gameName = gameName;
+      this.question = question;
+      this.answers = answers;
+      this.response = "It doesn't Matter";
+      this.messages = messages;
+      this.run = function() {
+      var guess = prompt(question);
+        for (var i = 0; i <= answers.length; i++) {
+          if (guess.toUpperCase() === answers[i]) {
+            alert(messages[i]);
+            return;
+          }
+          }
+          alert(this.response);
+        }
       }
-      }
-      alert(this.response);
-    }
-  }
-var movieGuess = new Game("Movie Guesses", "Tell me, objectively, best move ever.", ["MY OWN PRIVATE IDAHO", "BLADE RUNNER", "BLOOD IN BLOOD OUT"], ["Call me.", "Call me maybe...", "Weirdo"]);
-movieGuess.run();
-</script>
+    var movieGuess = new Game("Movie Guesses", "What is your favorite movie.", ["MY OWN PRIVATE IDAHO", "BLADE RUNNER", "BLOOD IN BLOOD OUT"], ["Rad", "Thats a pretty cliche answer", "One of those best worst movie situations"]);
+    movieGuess.run();
+    </script>
+
+  </body>
+</html>
