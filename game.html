@@ -36,10 +36,10 @@
       this.response = "It doesn't Matter";
       this.messages = messages;
       this.run = function() {
-      var guess = prompt(question);
-        for (var i = 0; i <= answers.length; i++) {
-          if (guess.toUpperCase() === answers[i]) {
-            alert(messages[i]);
+      var guess = prompt(this.question);
+        for (var i = 0; i <= this.answers.length; i++) {
+          if (guess.toUpperCase() === this.answers[i]) {
+            alert(this.messages[i]);
             return;
           }
           }
