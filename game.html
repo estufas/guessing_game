@@ -1,54 +1,29 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <title>Do we like the same movies?</title>
+    <title id="title">Do we like the same movies?</title>
+    <link type="text/css" rel="stylesheet" href="stylesheet.css"/>
   </head>
   <body>
-    <h3>Do we have the same taste in movies?</h3>
-    <p><span>A</span> Whats your favorite movie??</p>
-    <p>25,Human, Seattle</p>
-      <ul>
-          <li>Guesses</li>
-              <ol>
-                  <li></li>
-                  <li> </li>
-              </ol>
-          <li>High Scores</li>
-              <ul>
-                  <li></li>
-                  <li></li>
-              </ul>
-          <li>A 3rd list for whatever.</li>
-          <li>A 4th list for whatever.</li>
-      </ul>
-      <li>Guesses
-          <ul>
-            <li><img src="images/my_own_private.jpeg"/></li>
-            <li><img src="images/bladerunner.jpg"/></li>
-            <li><img src="images/slide-paco-chuey.jpg"/></li>
-          </ul>
-      </li>
-    <script>
-    function Game(gameName, question, answers, messages) {
-      this.gameName = gameName;
-      this.question = question;
-      this.answers = answers;
-      this.response = "It doesn't Matter";
-      this.messages = messages;
-      this.run = function() {
-      var guess = prompt(this.question);
-        for (var i = 0; i <= this.answers.length; i++) {
-          if (guess.toUpperCase() === this.answers[i]) {
-            alert(this.messages[i]);
-            return;
-          }
-          }
-          alert(this.response);
-        }
-      }
-    var movieGuess = new Game("Movie Guesses", "What is your favorite movie.", ["MY OWN PRIVATE IDAHO", "BLADE RUNNER", "BLOOD IN BLOOD OUT"], ["Rad", "Thats a pretty cliche answer", "One of those best worst movie situations"]);
-    movieGuess.run();
-    </script>
+    <p id="general_info">25,Human, Seattle</p>
+    <p><form action="demo_form.asp">
+Your choice: <input type="text" name="" value=""><br>
+<input type="submit" value="Submit">
+</form>
+</p>
 
-  </body>
+      <p id="demo"> </p>
+      <p id="demo_2"></p>
+
+      <table style="width:50%">
+  <tr>
+    <td><img src="images/my_own_private.jpeg"/></td>
+    <td><img src="images/bladerunner.jpg"/></td>
+    <td><img src="images/slide-paco-chuey.jpg"/></td>
+  </tr>
+</table>
+
+    <script src="java_commands.js"> game </script>
+
+    </body>
 </html>
