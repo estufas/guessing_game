@@ -5,15 +5,15 @@
     <link type="text/css" rel="stylesheet" href="stylesheet.css"/>
   </head>
   <body>
-    <p id="general_info">25,Human, Seattle</p>
-    <p><form action="demo_form.asp">
-Your choice: <input type="text" name="" value=""><br>
+    <p id="general_info">enter your favorite movie and it will give you a response</p>
+    <p><form action="game.html">
+Your choice: <input type="text" id="myInput" oninput="Game()"><br>
 <input type="submit" value="Submit">
 </form>
 </p>
 
-      <p id="demo"> </p>
-      <p id="demo_2"></p>
+      <p id="response"> </p>
+      <p id="what they wrote"></p>
 
       <table style="width:50%">
   <tr>
